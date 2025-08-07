@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mitu Karmakar Service Tab  Part 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f2f2f2;
+    }
+
+    .tabs {
+      display: flex;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      background: #ddd;
+      margin-right: 5px;
+      font-weight: bold;
+    }
+
+    .tab.active {
+      background-color: #fff;
+      border-bottom: 2px solid #fff;
+      color: #333;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .card {
+      background: #fffbf2;
+      border: 1px solid #ddd;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="tabs">
+    <button class="tab" onclick="openTab('home')">Home</button>
+    <button class="tab active" onclick="openTab('about')">About</button>
+    <button class="tab" onclick="openTab('services')">Services</button>
+    <button class="tab" onclick="openTab('contact')">Contact</button>
+  </div>
+
+   <div id="home" class="tab-content">
+    <div class="card">
+        <img src="./Img/Mitu Karmakar.jpg" alt="Mitu Karmakar" height="400px" width="400px">
+      <h3>Welcome to My Service</h3>
+      <p>I’m Mitu Karmakar, a skilled Full Stack Web Developer with a passion for building fast, responsive, and user-friendly websites. I specialize in both frontend and backend development, offering complete web solutions tailored to your business needs.</p>
+      <p>💼 What I Do
+        <ul>
+            <li>Custom Website Design & Development</li>
+            <li>WordPress & WooCommerce Setup</li>
+            <li>Responsive Frontend (HTML, CSS, JS, React, Tailwind)</li>
+            <li>Backend Development (PHP, Node.js, MySQL)</li>
+            <li>E-commerce, Portfolio & Business Websites</li>
+            <li>Website Speed, SEO & Security Optimization</li>
+        </ul>
+
+        Whether you need a personal website, an online store, or a custom web application — I’m here to help bring your vision to life.
+      </p>
+      
+    </div>
+  </div>
+
+  <div id="about" class="tab-content active">
+    <div class="card">
+      <h3>🧑‍💻 About My Services</h3>
+      <p>Hi, I’m Mitu Karmakar, a passionate and experienced Full Stack Web Developer dedicated to crafting high-quality, modern websites and web applications. I offer end-to-end web development solutions — from eye-catching front-end designs to robust back-end functionality — that help businesses grow and stand out online.<br><br>
+
+    Whether you're a startup looking for a sleek website, an established business in need of an online store, or someone who wants a custom web application — I can build it for you, exactly the way you want.
+
+    I work closely with every client to understand their goals, audience, and vision, ensuring that every project is custom-built, responsive, and optimized for performance and SEO.</p>
+    </div>
+    
+  </div>
+
+  <div id="services" class="tab-content">
+    <div class="card">
+      <h3>✅ Front-End Development</h3>
+      <p>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Vue.js, Tailwind CSS, Bootstrap</li>
+            <li>Fully responsive design for mobile, tablet, and desktop
+            <li>UI/UX focused development</li>
+        </ul>
+      </p>
+    </div>
+    <div class="card">
+      <h3>✅ Back-End Development</h3>
+      <p>
+        <ul>
+            <li>PHP, Node.js, Python</li>
+            <li>Frameworks: Laravel, Express.js, Django</li>
+            <li>PHP, Node.js, Python</li>
+            <li>PHP, Node.js, Python</li>
+            <li>PHP, Node.js, Python</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <div id="contact" class="tab-content">
+    <div class="card">
+      <h3>Contact Us</h3>
+      <p>Email: mitu.karmakar.marketing@gmail.com</p>
+      <p>Phone: +880-1719912494</p>
+      <p>Follow us on Instagram @mitukarmakar</p>
+    </div>
+  </div>
+
+  <script>
+    function openTab(tabId) {
+      // Remove 'active' class from all tabs
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+
+      // Hide all content
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      // Activate selected tab
+      document.querySelector(`[onclick="openTab('${tabId}')"]`).classList.add('active');
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
